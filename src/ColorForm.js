@@ -7,11 +7,18 @@ function ColorForm({addColor}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         addColor(input);
+        let element = document.getElementById("search");
+        element.value = "";
+        console.log(element);
     };
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" onChange={(e) => setInput(e.target.value)} />
+                <input
+                    id="search"
+                    type="text"
+                    onChange={(e) => setInput(e.target.value)}
+                />
                 <button type="submit">Submit!</button>
             </form>
         </div>
