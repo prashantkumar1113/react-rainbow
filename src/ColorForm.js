@@ -9,7 +9,6 @@ function ColorForm({addColor}) {
         addColor(input);
         let element = document.getElementById("search");
         element.value = "";
-        console.log(element);
     };
     return (
         <div>
